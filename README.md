@@ -1,40 +1,31 @@
-# ТАКТ — стоматологическая клиника
+# TAKT — Dental Landing Design
 
-Тестовое задание: шапка и первый экран. Дизайн и кликабельный прототип Figma.
+Desktop/mobile header and hero concept for a dental-clinic test assignment.
 
-**Проект:** Дизайн-концепция.
+[Open gallery](https://memorim.github.io/takt-dental-landing-design/)
 
-[Посмотреть галерею](https://memorim.github.io/takt-dental-landing-design/)
+![Desktop composition](assets/01-desktop.png)
 
-![Компьютерная версия](assets/01-desktop.png)
+<img src="assets/01-mobile.png" width="320" alt="Mobile composition">
 
-<img src="assets/01-mobile.png" width="320" alt="Мобильная версия">
+## Implementation
 
-## Что сделано
-- Одно визуальное направление, отдельные компьютерные и мобильные композиции.
-- Типографика, цвета, расстановка акцентов и основной призыв к действию.
-- Адаптивная HTML-галерея для просмотра результатов без редактора.
+Static HTML/CSS gallery, image assets and design exports. The gallery can be served directly; no application build or secret configuration is needed. Desktop and mobile compositions are separate assets.
 
-## Материалы
-[Редактируемый оригинал в Figma](https://www.figma.com/design/XEm4erzUplKu6AxoE8y8Cg?node-id=3-36). Auto Layout, цветовые переменные, компоненты кнопок и интерактивные переходы. В репозитории — компьютерные и мобильные PNG-экспорты.
-
-## Запуск и проверка
-Проверено с Python 3.12.14 только для локального сервера и проверки файлов. Сама галерея использует HTML и CSS без сборки и зависимостей.
+## Local setup and checks
 
 ```bash
 python tests/check_assets.py
-python -m http.server 8080
+python .github/scripts/check_docs.py
+python -m http.server 8080 --bind 127.0.0.1
 ```
 
-Открыть http://localhost:8080. Кнопки навигации галереи работают; элементы внутри макетов остаются изображениями.
+Use Python 3.12.14, matching CI. Open `http://localhost:8080`. CI checks asset references and documentation; it does not certify interactive behavior inside images.
 
-## Реализация
-Макеты показаны в исходных пропорциях: компьютерная и мобильная композиции подготовлены отдельно. Галерея использует CSS Grid и обычные HTML-ссылки, дополнительные экраны раскрываются через details. Данные посетителей не собираются.
+## Scope and limits
 
-## Демонстрация просмотра
-[Короткий GIF галереи](docs/demo.gif).
+A design test assignment, not an operating clinic site or appointment backend.
 
-[Проверка файлов и запуска](docs/VERIFICATION.md).
+No database, migrations or API are required for this static scope. Forms or integrations would be a separate implementation task.
 
-## Проверки и обновления
-CI проверяет проект и ссылки на локальные материалы. Dependabot предлагает обновления зависимостей и Actions. [История изменений](CHANGELOG.md).
+[Technical details](docs/TECHNICAL.md) · [Recorded checks](docs/VERIFICATION.md) · [Change history](CHANGELOG.md)
