@@ -1,18 +1,20 @@
-# TAKT — Dental Landing Design
+# ТАКТ — дизайн сайта стоматологической клиники
 
-Desktop/mobile header and hero concept for a dental-clinic test assignment.
+Шапка и первый экран клиники: компьютерная и мобильная версии, меню и экран записи.
 
-[Open gallery](https://memorim.github.io/takt-dental-landing-design/)
+[Открыть проект](https://memorim.github.io/takt-dental-landing-design/)
 
-![Desktop composition](assets/01-desktop.png)
+![Компьютерная версия](assets/01-desktop.png)
 
-<img src="assets/01-mobile.png" width="320" alt="Mobile composition">
+<img src="assets/01-mobile.png" width="320" alt="Мобильная версия">
 
-## Implementation
+## Устройство проекта
 
-Static HTML/CSS gallery, image assets and design exports. The gallery can be served directly; no application build or secret configuration is needed. Desktop and mobile compositions are separate assets.
+Галерея макетов на HTML/CSS и экспорты изображений. Сайт можно обслуживать статическим HTTP-сервером. Сборка приложения и настройка секретов не требуются.
 
-## Local setup and checks
+## Локальный запуск и проверки
+
+Python 3.12.14, как в CI.
 
 ```bash
 python tests/check_assets.py
@@ -20,12 +22,12 @@ python .github/scripts/check_docs.py
 python -m http.server 8080 --bind 127.0.0.1
 ```
 
-Use Python 3.12.14, matching CI. Open `http://localhost:8080`. CI checks asset references and documentation; it does not certify interactive behavior inside images.
+Откройте `http://localhost:8080`. CI проверяет ссылки на файлы, наличие изображений и документацию. Макеты внутри PNG/SVG не становятся интерактивными от запуска галереи.
 
-## Scope and limits
+## Границы реализации
 
-A design test assignment, not an operating clinic site or appointment backend.
+Запись к врачу и серверная обработка заявок не подключены. Элементы внутри изображений служат для просмотра дизайна.
 
-No database, migrations or API are required for this static scope. Forms or integrations would be a separate implementation task.
+База данных, миграции и API в текущем варианте не используются.
 
-[Technical details](docs/TECHNICAL.md) · [Recorded checks](docs/VERIFICATION.md) · [Change history](CHANGELOG.md)
+[Технические сведения](docs/TECHNICAL.md) · [Выполненные проверки](docs/VERIFICATION.md) · [История изменений](CHANGELOG.md)
