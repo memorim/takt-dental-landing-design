@@ -2,7 +2,7 @@
 
 Шапка и первый экран клиники: компьютерная и мобильная версии, меню и экран записи.
 
-[Открыть проект](https://memorim.github.io/takt-dental-landing-design/)
+[Открыть проект](https://www.figma.com/design/XEm4erzUplKu6AxoE8y8Cg?node-id=3-36)
 
 ![Компьютерная версия](assets/01-desktop.png)
 
